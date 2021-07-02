@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "Primeval:items/camouflage_paste"
+    "layer0": "primeval:items/camouflage_paste"
   }
 }
