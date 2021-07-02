@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "primeval:camouflage_paste"
+    },
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "result": {
+    "item": "primeval:rainbow_block",
+    "count": 1
+  },
+  "group": "Primeval"
+}
