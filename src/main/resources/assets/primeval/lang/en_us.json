@@ -1,4 +1,5 @@
 {
-  "item.primeval.camouflage_paste":"Camouflage Paste",
-  "block.primeval.rainbow_block": "Rainbow Wool"
+  "item.primeval.camouflage_paste":"Rainbow Scale",
+  "block.primeval.rainbow_block": "Rainbow Wool",
+  "itemGroup.primeval.primeval_group": "Primeval Mobs"
 }
