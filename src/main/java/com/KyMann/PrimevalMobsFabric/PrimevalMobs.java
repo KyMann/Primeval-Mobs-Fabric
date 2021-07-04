@@ -1,6 +1,8 @@
 package com.KyMann.PrimevalMobsFabric;
 
 import com.KyMann.PrimevalMobsFabric.registry.ModBlocks;
+import com.KyMann.PrimevalMobsFabric.registry.ModEntities;
+import com.KyMann.PrimevalMobsFabric.registry.ModEntityRenderers;
 import net.fabricmc.api.ModInitializer;
 import com.KyMann.PrimevalMobsFabric.registry.ModItems;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -9,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class PrimevalMobs implements ModInitializer {
+    //Holds all the Registration
 
     public static final String MOD_ID = "primeval";
 
@@ -21,6 +24,8 @@ public class PrimevalMobs implements ModInitializer {
     public void onInitialize() {
         ModBlocks.registerBlocks();
         ModItems.registerItems();
+        ModEntities.registerEntities();
+        ModEntityRenderers.register();
     }
 
 }
