@@ -1,7 +1,6 @@
 package com.KyMann.PrimevalMobsFabric.entity.Renderer;
 
 import com.KyMann.PrimevalMobsFabric.PrimevalMobs;
-import com.KyMann.PrimevalMobsFabric.entity.DefaultEntity;
 import com.KyMann.PrimevalMobsFabric.entity.SupportCreeperEntity;
 import com.KyMann.PrimevalMobsFabric.entity.model.SupportCreeperModel;
 import com.KyMann.PrimevalMobsFabric.registry.ModEntityRenderers;
@@ -13,10 +12,10 @@ import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class SupportCreeperRenderer extends MobEntityRenderer<SupportCreeperEntity, SupportCreeperModel> {
-    private static final Identifier Texture = new Identifier(PrimevalMobs.MOD_ID, "textures/entities/treasure_slime.png");
+    private static final Identifier Texture = new Identifier(PrimevalMobs.MOD_ID, "textures/entities/supportcreeper.png");
 
     public SupportCreeperRenderer(EntityRendererFactory.Context context) {
-        super(context, new SupportCreeperModel(context.getPart(ModEntityRenderers.TREASURE_SLIME_LAYER)), 0.5f);
+        super(context, new SupportCreeperModel(context.getPart(ModEntityRenderers.SUPPORT_CREEPER_LAYER)), 0.5f);
     }
 
     @Override
