@@ -23,7 +23,7 @@ public class TreasureSlimeModel extends AnimalModel<TreasureSlimeEntity> {
         modelPartData.addChild(EntityModelPartNames.BODY, ModelPartBuilder.create()
                 .uv(0,0)
                 .cuboid(-4,-4,-4,8,8,8), ModelTransform.pivot(0,20,0));
-        return TexturedModelData.of(modelData, 16,16);
+        return TexturedModelData.of(modelData, 64,32);
     }
 
     @Override
