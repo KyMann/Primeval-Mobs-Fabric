@@ -3,6 +3,7 @@ package com.KyMann.PrimevalMobsFabric.entity;
 import com.KyMann.PrimevalMobsFabric.registry.ModEntities;
 import net.minecraft.block.*;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.Tameable;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -17,9 +18,12 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
+import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Random;
 
 
 public class ChameleonEntity extends TameableEntity implements Tameable {
@@ -79,7 +83,7 @@ public class ChameleonEntity extends TameableEntity implements Tameable {
             float g = crossFade(this.skinColor[1], newRGB[1]);
             float b = crossFade(this.skinColor[2], newRGB[2]);
             float[] newSkinColor = {r, g, b, 100};
-            System.out.println(String.format("newSkinColor = %f, %f, %f", r, g, b));
+//            System.out.println(String.format("newSkinColor = %f, %f, %f", r, g, b));
             setSkinColor(newSkinColor);
         }
     }
@@ -155,14 +159,15 @@ public class ChameleonEntity extends TameableEntity implements Tameable {
         return super.interactMob(player, hand);
     }
 
-    public boolean canSpawn(WorldView view) {
-        BlockPos blockUnderEntity = new BlockPos(this.getX(), this.getY()-1, this.getZ());
-        BlockPos positionentitiy = new BlockPos(this.getX(), this.getY(), this.getZ());
-        boolean chameleonCanSpawn = view.intersectsEntities(this)
-                && this.world.isDay()
-                && !world.containsFluid(this.getBoundingBox())
-                && this.world.getBlockState(positionentitiy).getBlock().canMobSpawnInside()
-                && this.world.getBlockState(blockUnderEntity).allowsSpawning(view, blockUnderEntity, ModEntities.CHAMELEON);
-        return chameleonCanSpawn;
+    public static boolean canSpawn(EntityType<ChameleonEntity> chameleonEntityType, WorldAccess worldAccess, SpawnReason spawnReason, BlockPos blockPos, Random random) {
+        System.out.println("Trying to spawn Chameleon" + blockPos.toShortString());
+
+        try {
+            var spawnBlock = worldAccess.getBlockState(blockPos.down());
+            return !worldAccess.isWater(blockPos) && spawnBlock.isIn(ModEntities.CHAMELEON_SPAWN_BLOCKS);
+        }
+        catch (Exception E) {
+            return true;
+        }
     }
 }

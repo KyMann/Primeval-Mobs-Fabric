@@ -4,10 +4,9 @@
   "package": "com.KyMann.PrimevalMobsFabric.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "SpawnRestrictionMixin"
   ],
-  "client": [
-    "EntitysMixin"
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }

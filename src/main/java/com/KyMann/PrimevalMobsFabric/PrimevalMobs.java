@@ -1,10 +1,7 @@
 package com.KyMann.PrimevalMobsFabric;
 
-import com.KyMann.PrimevalMobsFabric.registry.ModBlocks;
-import com.KyMann.PrimevalMobsFabric.registry.ModEntities;
-import com.KyMann.PrimevalMobsFabric.registry.ModEntityRenderers;
+import com.KyMann.PrimevalMobsFabric.registry.*;
 import net.fabricmc.api.ModInitializer;
-import com.KyMann.PrimevalMobsFabric.registry.ModItems;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -26,6 +23,7 @@ public class PrimevalMobs implements ModInitializer {
         ModItems.registerItems();
         ModEntities.registerEntities();
         ModEntityRenderers.register();
+        SpawnRegistry.register();
     }
 
 }
