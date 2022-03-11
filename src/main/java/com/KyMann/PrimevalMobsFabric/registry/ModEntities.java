@@ -7,7 +7,6 @@ import com.KyMann.PrimevalMobsFabric.entity.TreasureSlimeEntity;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -30,7 +29,7 @@ public class ModEntities {
             .spawnRestriction(SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ChameleonEntity::canSpawn)
             .build();
 
-    public static final Tag<Block> CHAMELEON_SPAWN_BLOCKS = TagRegistry.block(new Identifier(PrimevalMobs.MOD_ID, "chameleon_spawn_blocks"));
+    //public static final Tag<Block> CHAMELEON_SPAWN_BLOCKS = TagRegistry.block(new Identifier(PrimevalMobs.MOD_ID, "chameleon_spawn_blocks"));
 
     public static final EntityType<TreasureSlimeEntity> TREASURE_SLIME = FabricEntityTypeBuilder
             .create(SpawnGroup.MONSTER, TreasureSlimeEntity::new)

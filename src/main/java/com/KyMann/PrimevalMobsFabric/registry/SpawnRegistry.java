@@ -29,13 +29,14 @@ public class SpawnRegistry {
 
     private static void normalSpawn() {
         Predicate<BiomeSelectionContext> biomeSelector = (context) -> {
-            Biome.Category category = context.getBiome().getCategory();
-            return category == Biome.Category.JUNGLE
-                    && category == Biome.Category.DESERT
-                    && category != Biome.Category.NETHER
-                    && category != Biome.Category.THEEND
-                    && category != Biome.Category.MUSHROOM
-                    && category != Biome.Category.THEEND;
+            //Biome.Category category = context.getBiome().getCategory();
+//            return category == Biome.Category.JUNGLE
+//                    && category == Biome.Category.DESERT
+//                    && category != Biome.Category.NETHER
+//                    && category != Biome.Category.THEEND
+//                    && category != Biome.Category.MUSHROOM
+//                    && category != Biome.Category.THEEND;
+            return true;
         };
         addSpawn(biomeSelector, ModEntities.CHAMELEON.getSpawnGroup(), new SpawnSettings.SpawnEntry(ModEntities.CHAMELEON, 200, 1, 3));
     }
