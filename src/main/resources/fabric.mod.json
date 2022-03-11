@@ -1,35 +1,36 @@
 {
   "schemaVersion": 1,
-  "id": "primeval",
+  "id": "modid",
   "version": "${version}",
 
-  "name": "Primeval Mobs",
-  "description": "Fabric Port of Primitive Mobs with some different flavor",
+  "name": "Example Mod",
+  "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "KyMann"
+    "Me!"
   ],
   "contact": {
-    "homepage": "",
-    "sources": "https://github.com/KyMann/Primeval-Mobs-Fabric"
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/primeval/icon.png",
+  "icon": "assets/modid/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.KyMann.PrimevalMobsFabric.PrimevalMobs"
+      "net.fabricmc.example.ExampleMod"
     ]
   },
   "mixins": [
+    "modid.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.13.3",
     "fabric": "*",
-    "minecraft": "1.17.x",
-    "java": ">=16"
+    "minecraft": "1.18.x",
+    "java": ">=17"
   },
   "suggests": {
     "another-mod": "*"

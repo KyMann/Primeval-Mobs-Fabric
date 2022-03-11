@@ -164,7 +164,7 @@ public class ChameleonEntity extends TameableEntity implements Tameable {
 
         try {
             var spawnBlock = worldAccess.getBlockState(blockPos.down());
-            return !worldAccess.isWater(blockPos) && spawnBlock.isIn(ModEntities.CHAMELEON_SPAWN_BLOCKS);
+            return !worldAccess.isWater(blockPos); // && spawnBlock.isIn(ModEntities.CHAMELEON_SPAWN_BLOCKS);
         }
         catch (Exception E) {
             return true;
