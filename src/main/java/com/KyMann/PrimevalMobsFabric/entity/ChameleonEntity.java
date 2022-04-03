@@ -21,8 +21,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
-import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 
@@ -164,7 +164,7 @@ public class ChameleonEntity extends TameableEntity implements Tameable {
 
         try {
             var spawnBlock = worldAccess.getBlockState(blockPos.down());
-            return !worldAccess.isWater(blockPos); // && spawnBlock.isIn(ModEntities.CHAMELEON_SPAWN_BLOCKS);
+            return !worldAccess.isWater(blockPos); //&& spawnBlock.isIn(ModEntities.CHAMELEON_SPAWN_BLOCKS);
         }
         catch (Exception E) {
             return true;

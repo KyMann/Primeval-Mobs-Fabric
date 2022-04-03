@@ -14,7 +14,7 @@ public class ModBlocks {
 
     public static final Block RAINBOW_BLOCK = new Block(FabricBlockSettings
             .of(Material.WOOL)
-            //.breakByTool(FabricTag.SHEARS)
+            //.breakByTool(FabricToolTags.SHEARS)
             .strength(0.2f, 1.1f)
             .sounds(BlockSoundGroup.WOOL)
     );
