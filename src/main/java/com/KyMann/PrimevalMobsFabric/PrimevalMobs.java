@@ -6,11 +6,15 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PrimevalMobs implements ModInitializer {
     //Holds all the Registration
 
     public static final String MOD_ID = "primeval";
+
+    public static final Logger LOGGER = LoggerFactory.getLogger("primeval");
 
     public static final ItemGroup PRIMEVAL_GROUP = FabricItemGroupBuilder.build(
             new Identifier(MOD_ID, "primeval_group"),

@@ -1,29 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "primeval",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Primeval mobs",
+  "description": "Fabric Port of Primitive Mobs with some different flavor",
   "authors": [
-    "Me!"
+    "KyMann"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "",
+    "sources": "https://github.com/KyMann/Primeval-Mobs-Fabric"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/primeval/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.KyMann.PrimevalMobsFabric.PrimevalMobs"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
   ],
 
   "depends": {
