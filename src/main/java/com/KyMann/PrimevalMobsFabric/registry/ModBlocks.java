@@ -3,6 +3,7 @@ package com.KyMann.PrimevalMobsFabric.registry;
 import com.KyMann.PrimevalMobsFabric.PrimevalMobs;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 //import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+//TODO: find the new tool tag class
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;

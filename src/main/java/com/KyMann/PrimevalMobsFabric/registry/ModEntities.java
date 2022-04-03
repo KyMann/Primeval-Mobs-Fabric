@@ -29,7 +29,7 @@ public class ModEntities {
             .spawnRestriction(SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ChameleonEntity::canSpawn)
             .build();
 
-    //public static final Tag<Block> CHAMELEON_SPAWN_BLOCKS = TagRegistry.block(new Identifier(PrimevalMobs.MOD_ID, "chameleon_spawn_blocks"));
+    //public static final Tag<Block> CHAMELEON_SPAWN_BLOCKS = TagAPI.addBlockTag(); //TagFactory.Block.create(new Identifier(PrimevalMobs.MOD_ID, "chameleon_spawn_blocks"));
 
     public static final EntityType<TreasureSlimeEntity> TREASURE_SLIME = FabricEntityTypeBuilder
             .create(SpawnGroup.MONSTER, TreasureSlimeEntity::new)
